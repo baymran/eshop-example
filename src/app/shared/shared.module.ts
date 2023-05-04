@@ -4,6 +4,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "../app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -12,13 +13,15 @@ import {AppRoutingModule} from "../app-routing.module";
     HeaderComponent,
     FooterComponent
   ],
-  exports: [
-    HeaderComponent
-  ],
   imports: [
     CommonModule,
     RouterModule,
-    AppRoutingModule
-  ]
+    AppRoutingModule,
+    HttpClientModule
+  ],
+  exports: [
+    HeaderComponent,
+    HttpClientModule
+  ],
 })
 export class SharedModule { }
