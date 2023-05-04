@@ -1,0 +1,14 @@
+.container {
+  margin: 0 100px;
+}
+mat-grid-tile {
+  background-color: #e7e7e7;
+}
+
+mat-card {
+  width: 85%;
+}
+
+img {
+  width: 100px;
+}

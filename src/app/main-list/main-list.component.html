@@ -1,0 +1,18 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+<div class="container">
+  <mat-grid-list cols="4" rowHeight="15em">
+    <mat-grid-tile *ngFor="let product of products | async">
+      <mat-card>
+        <mat-card-content>
+          <p>{{product.title | uppercase | slice:0:15}}</p>
+          <div>
+            <img src="{{product.url}}" mat-card-image>
+          </div>
+          <button mat-raised-button>В Корзину</button>
+        </mat-card-content>
+
+
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
